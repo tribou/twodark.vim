@@ -1,5 +1,7 @@
 # onedark.vim
 
+Renamed everything from `onedark` to `twodark`.
+
 A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, based on [FlatColor](https://github.com/MaxSt/FlatColor), with colors inspired by the excellent [One Dark syntax theme](https://github.com/atom/one-dark-syntax) for the [Atom text editor](https://atom.io).
 
 ![onedark.vim Preview](https://raw.githubusercontent.com/joshdick/onedark.vim/master/img/preview.png)
