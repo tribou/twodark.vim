@@ -1,7 +1,7 @@
 {
-  "name": "onedark.vim-builder",
+  "name": "twodark.vim-builder",
   "version": "1.0.0",
-  "description": "Builds the onedark.vim Vim colorscheme and associated files",
+  "description": "Builds the twodark.vim Vim colorscheme and associated files",
   "main": "build.js",
   "scripts": {
     "build": "node build.js",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joshdick/onedark.vim.git"
+    "url": "https://github.com/joshdick/twodark.vim.git"
   },
   "devDependencies": {
     "eslint": "4.18.2",

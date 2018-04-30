@@ -1,11 +1,11 @@
 " vim:fdm=marker
 " Vim Color File
-" Name:       onedark.vim
-" Maintainer: https://github.com/joshdick/onedark.vim/
+" Name:       twodark.vim
+" Maintainer: https://github.com/joshdick/twodark.vim/
 " License:    The MIT License (MIT)
 " Based On:   https://github.com/MaxSt/FlatColor/
 
-" A companion [vim-airline](https://github.com/bling/vim-airline) theme is available at: https://github.com/joshdick/airline-onedark.vim
+" A companion [vim-airline](https://github.com/bling/vim-airline) theme is available at: https://github.com/joshdick/airline-twodark.vim
 
 " Color Reference {{{
 
@@ -51,27 +51,27 @@ endif
 
 set t_Co=256
 
-let g:colors_name="onedark"
+let g:colors_name="twodark"
 
 " Set to "256" for 256-color terminals, or
 " set to "16" to use your terminal emulator's native colors
 " (a 16-color palette for this color scheme is available; see
-" < https://github.com/joshdick/onedark.vim/blob/master/README.md >
+" < https://github.com/joshdick/twodark.vim/blob/master/README.md >
 " for more information.)
-if !exists("g:onedark_termcolors")
-  let g:onedark_termcolors = 256
+if !exists("g:twodark_termcolors")
+  let g:twodark_termcolors = 256
 endif
 
 " Not all terminals support italics properly. If yours does, opt-in.
-if !exists("g:onedark_terminal_italics")
-  let g:onedark_terminal_italics = 0
+if !exists("g:twodark_terminal_italics")
+  let g:twodark_terminal_italics = 0
 endif
 
 " This function is based on one from FlatColor: https://github.com/MaxSt/FlatColor/
 " Which in turn was based on one found in hemisu: https://github.com/noahfrederick/vim-hemisu/
-let s:group_colors = {} " Cache of default highlight group settings, for later reference via `onedark#extend_highlight`
+let s:group_colors = {} " Cache of default highlight group settings, for later reference via `twodark#extend_highlight`
 function! s:h(group, style, ...)
-  if (a:0 > 0) " Will be true if we got here from onedark#extend_highlight
+  if (a:0 > 0) " Will be true if we got here from twodark#extend_highlight
     let a:highlight = s:group_colors[a:group]
     for style_type in ["fg", "bg", "sp"]
       if (has_key(a:style, style_type))
@@ -87,7 +87,7 @@ function! s:h(group, style, ...)
     let s:group_colors[a:group] = a:highlight " Cache default highlight group settings
   endif
 
-  if g:onedark_terminal_italics == 0
+  if g:twodark_terminal_italics == 0
     if has_key(a:highlight, "cterm") && a:highlight["cterm"] == "italic"
       unlet a:highlight.cterm
     endif
@@ -96,7 +96,7 @@ function! s:h(group, style, ...)
     endif
   endif
 
-  if g:onedark_termcolors == 16
+  if g:twodark_termcolors == 16
     let l:ctermfg = (has_key(a:highlight, "fg") ? a:highlight.fg.cterm16 : "NONE")
     let l:ctermbg = (has_key(a:highlight, "bg") ? a:highlight.bg.cterm16 : "NONE")
   else
@@ -116,11 +116,11 @@ endfunction
 
 " public {{{
 
-function! onedark#set_highlight(group, style)
+function! twodark#set_highlight(group, style)
   call s:h(a:group, a:style)
 endfunction
 
-function! onedark#extend_highlight(group, style)
+function! twodark#extend_highlight(group, style)
   call s:h(a:group, a:style, 1)
 endfunction
 
@@ -130,7 +130,7 @@ endfunction
 
 " Color Variables {{{
 
-let s:colors = onedark#GetColors()
+let s:colors = twodark#GetColors()
 
 let s:red = s:colors.red
 let s:dark_red = s:colors.dark_red
