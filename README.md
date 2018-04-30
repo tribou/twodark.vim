@@ -1,4 +1,4 @@
-# onedark.vim
+# twodark.vim
 
 Renamed everything from `onedark` to `twodark`.
 
